@@ -1,12 +1,12 @@
 # **MetaX**
 ## Welcome to the door of the MetaVerse !
 
-**.** clone the reop and then migrate to the folder
+1. clone the repo and then migrate to the folder
 ```sh
 cd MetaX
 ```
 
-Then install all the dependencies by running 
+2. Then install all the dependencies by running 
 ```sh
 npm install 
 ```
