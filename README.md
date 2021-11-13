@@ -2,20 +2,8 @@
 
 ## Welcome to the gateway of the MetaVerse !
 
-1. clone the repo and then migrate to the folder
+###This project is for the web3 jam hack by 0xProf
 
-```sh
-cd MetaX
-```
-
-2. Then install all the dependencies by running
-
-```sh
-npm install
-```
-
-or
-
-```sh
-yarn install
-```
+**It is a streaming network and nft minting app where users **
+**can clip part of a video and sell it as NFT on the platform**
+**or as the team likes to call XFT**
