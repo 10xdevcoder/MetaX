@@ -1,46 +1,18 @@
-# Digital marketplace on Ethererum
+# MetaX
+Welcome to the door of the MetaVerse !
 
-This is the completed version of the NFT marketplace app from the attached [workshop](https://github.com/dabit3/full-stack-ethereum-marketplace-workshop).
-
-## Getting Started
-
-First, clone the repo and install the dependencies:
-
+clone the reop and then migrate to the folder
 ```sh
-git clone https://github.com/dabit3/full-stack-ethereum-marketplace-workshop.git
-
-cd full-stack-ethereum-marketplace-workshop/marketplace-example
-
-yarn
-
-# or
-
-npm install
+cd MetaX
 ```
 
-Next, run a local Ethereum node:
-
+Then install all the dependencies by running 
 ```sh
-npx hardhat node
+npm install 
 ```
-
-Deploy the smart contract to the local node:
-
+or
 ```sh
-npx hardhat run scripts/deploy.js --network localhost
+yarn install
 ```
 
-Running the above command should print out the addresses where the contract was deployed. Update `config.js` with those values:
 
-```javascript
-export const nftaddress = "nft-contract-address"
-export const nftmarketaddress = "marketplace-address"
-```
-
-Next, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
