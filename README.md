@@ -1,7 +1,7 @@
-#### MetaX
-##Welcome to the door of the MetaVerse !
+### MetaX
+## Welcome to the door of the MetaVerse !
 
-clone the reop and then migrate to the folder
+**o** clone the reop and then migrate to the folder
 ```sh
 cd MetaX
 ```
