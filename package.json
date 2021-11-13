@@ -15,6 +15,7 @@
     "@unlock-protocol/unlock-js": "^0.20.4",
     "axios": "^0.21.1",
     "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.3.1",
     "hardhat": "^2.4.0",

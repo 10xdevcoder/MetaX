@@ -1,4 +1,8 @@
 require("@nomiclabs/hardhat-waffle");
+require('dotenv').config();
+
+const rinkeby_private_key = process.env.RINKEBY_PRIVATE_KEY;
+const api_key = process.env.ALCHEMY_API_KEY;
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -16,14 +20,17 @@ task("accounts", "Prints the list of accounts", async () => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
- module.exports = {
+module.exports = {
   solidity: "0.8.3",
   paths: {
     artifacts: './artifacts',
   },
   networks: {
-    hardhat: {
-      chainId: 1337
+    ropsten: {
+      url: `https://eth-rinkeby.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
+      accounts: [`0X${RINKEBY_PRIVATE_KEY}`]
+
+
     }
   }
 };
