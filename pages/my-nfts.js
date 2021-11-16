@@ -22,11 +22,11 @@ export default function Home() {
     const connection = await web3Modal.connect()
     const provider = new ethers.providers.Web3Provider(connection)
     const signer = provider.getSigner()
-      
+
     const marketContract = new ethers.Contract(nftmarketaddress, Market.abi, signer)
     const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider)
     const data = await marketContract.fetchMyNFTs()
-    
+
     const items = await Promise.all(data.map(async i => {
       const tokenUri = await tokenContract.tokenURI(i.tokenId)
       const meta = await axios.get(tokenUri)
@@ -42,13 +42,13 @@ export default function Home() {
     }))
     console.log('items: ', items)
     setNfts(items)
-    setLoaded('loaded') 
+    setLoaded('loaded')
   }
-  if (loaded === 'loaded' && !nfts.length) return (<h1 className="p-20 text-4xl">No NFTs!</h1>)
-  if (loaded === 'not-loaded' && !nfts.length) return (<button onClick={loadNFTs} className="rounded bg-blue-600 py-2 px-12 text-white m-16">Fetch NFTs</button>)
+  if (loaded === 'loaded' && !nfts.length) return (<h1 className="p-20 text-4xl">You currently own no asset!</h1>)
+  // if (loaded === 'not-loaded' && !nfts.length) return (<button onClick={loadNFTs} className="rounded bg-blue-600 py-2 px-12 text-white m-16">Fetch NFTs</button>)
   return (
     <div className="flex justify-center">
-      <div style={{ width: 900 }}>
+      <div style={{ width: 750 }}>
         <div className="grid grid-cols-2 gap-4 pt-8">
           {
             nfts.map((nft, i) => (

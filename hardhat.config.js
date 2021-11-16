@@ -26,9 +26,9 @@ module.exports = {
     artifacts: './artifacts',
   },
   networks: {
-    ropsten: {
-      url: `https://eth-rinkeby.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
-      accounts: [`0X${RINKEBY_PRIVATE_KEY}`]
+    rinkeby: {
+      url: `https://eth-rinkeby.alchemyapi.io/v2/${api_key}`,
+      accounts: [`0x${rinkeby_private_key}`]
 
 
     }

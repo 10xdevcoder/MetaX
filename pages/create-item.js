@@ -36,7 +36,7 @@ export default function Home() {
     let tokenId = value.toNumber()
     const price = web3.utils.toWei(formInput.price, 'ether')
 
-    const listingPrice = web3.utils.toWei('0.1', 'ether')
+    const listingPrice = web3.utils.toWei(formInput.price, 'ether')
 
     contract = new ethers.Contract(nftmarketaddress, Market.abi, signer)
     transaction = await contract.createMarketItem(nftaddress, tokenId, price, { value: listingPrice })
@@ -105,7 +105,7 @@ export default function Home() {
           )
         }
         <button onClick={createMarket} className="mt-4 bg-blue-500 text-white rounded p-4 shadow-lg">
-          Create Digital Asset
+          Create NFT
         </button>
       </div>
     </div>
