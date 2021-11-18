@@ -36,7 +36,7 @@ export default function Home() {
     let tokenId = value.toNumber()
     const price = web3.utils.toWei(formInput.price, 'ether')
 
-    const listingPrice = web3.utils.toWei(formInput.price, 'ether')
+    const listingPrice = web3.utils.toWei('0.01', 'ether')
 
     contract = new ethers.Contract(nftmarketaddress, Market.abi, signer)
     transaction = await contract.createMarketItem(nftaddress, tokenId, price, { value: listingPrice })
@@ -62,6 +62,7 @@ export default function Home() {
   async function createMarket() {
     const { name, description, price } = formInput
     if (!name || !description || !price || !fileUrl) return
+    console.log(name + " was created")
     // first, upload to IPFS
     const data = JSON.stringify({
       name, description, image: fileUrl
