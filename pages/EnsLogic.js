@@ -65,42 +65,38 @@ class EnsLogic extends React.Component {
 
         return (
             <>
-                <div id='enslogic' className="Logic"  style={{
-            background: 'blue',
-            color: 'blue'
-        }} >
-                    <h1 style={{
+                <h1 style={{
 
-                        position: 'relative',
-                        left: '30px'
-                    }} >This is a simple ENS resolution.
-                        <h1>Please double click the search button upon any change for confirmation.</h1></h1>
-                    <form onSubmit={this.handleSubmit}>
-                        <input
-                            onChange={this.handleChange}
-                            required
-                            className="mt-8 border rounded p-4"
-                            style={{
-                                width: '400px',
-                                height: '40px',
+                    position: 'relative',
+                    left: '30px'
+                }} >This is a simple ENS resolution.
+                    <h1>Please double click the search button upon any change for confirmation.</h1></h1>
+                <form onSubmit={this.handleSubmit}>
+                    <input
+                        onChange={this.handleChange}
+                        required
+                        className="mt-8 border rounded p-4"
+                        style={{
+                            width: '400px',
+                            height: '40px',
 
-                                position: 'relative',
-                                left: '30px'
-                            }}
-                            type="text"
-                            id="header-search"
-                            placeholder="Input ENS name or an address"
-
-                        />
-                        <button style={{
                             position: 'relative',
-                            left: '35px'
-
+                            left: '30px'
                         }}
+                        type="text"
+                        id="header-search"
+                        placeholder="Input ENS name or an address"
 
-                            className="mt-4 bg-blue-500 text-white rounded px-5 py-2 shadow-lg" type="submit">Search</button>
-                    </form>
-                </div>
+                    />
+                    <button style={{
+                        position: 'relative',
+                        left: '35px'
+
+                    }}
+
+                        className="mt-4 bg-blue-500 text-white rounded px-5 py-2 shadow-lg" type="submit">Search</button>
+                </form>
+
             </>
         )
     };

@@ -64,11 +64,6 @@ function Home() {
         const receipt = await transaction.wait()
     }
 
-    var isLicked1 = false;
-    var isLicked2 = false;
-    var isLicked3 = false;
-
-
 
 
 
@@ -76,18 +71,44 @@ function Home() {
         <>
             <h1>Welcome to MetaX, now face the unlickable gelato ice Cream </h1>
             <div className='flex flex-row'>
-                <img width={400} height={600} src="/gelato.png" />
-                <h2> Welcome to MetaX </h2>
-                <p> a place where you can stream a video from livepeer and mint it as nft </p>
-                <p> you can also create digital assets as nfts and put it up for sale </p>
-                <p> you earn rewards why doing all this, you get our custom XFT token </p>
-                <p> get enough XFT then you can trade it and become part of our DAO </p>
+                <img width={170} height={240} src="/gelato.png" />
+                <br></br>
+                <div alignItem='left'
+
+                    styles={{
+                        position: 'relative',
+                        left: '60%'
+
+                    }}>
+                    <h2 styles={{
+                        position: 'relative',
+                        left: '90px'
+
+                    }}> Welcome to MetaX </h2>
+                    <p styles={{
+                        position: 'relative',
+                        left: '50px'
+
+
+                    }}> a place where you can stream a video from livepeer and mint it as nft </p>
+                    <p styles={{
+                        position: 'relative',
+                        left: '30px'
+
+                    }}> you can also create digital assets as nfts and put it up for sale </p>
+                    <p styles={{
+                        position: 'relative',
+                        left: '30px'
+
+                    }}> you earn rewards why doing all this, you get our custom XFT token </p>
+                    <p styles={{
+                        position: 'relative',
+                        left: '30px'
+
+                    }}> get enough XFT then you can trade it and become part of our DAO </p>
+                </div>
             </div>
-            <button
-                className="mt-4 bg-blue-500 text-white rounded p-4 shadow-lg"
-                onclick={Lick}
-            >
-                Lick me, If you dare</button>
+
             <button
                 onClick={purchaseMembership}
                 className="mt-4 bg-blue-500 text-white rounded p-4 shadow-lg"> Purchase lock</button>
