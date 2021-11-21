@@ -2,46 +2,10 @@ import { type } from 'os';
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import styled from 'styled-components';
+import Head from 'next/head'
 
 
-const Tab = styled.button`
-    padding: 10px 60px;
-    cursor: pointer;
-    opacity:0.6;
-    bacground: white; // this is white but i can change it to some thing else later
-    border: 0;
-    outline: 0;
-    ${({ active }) =>
-        active &&
-        `border-bottom: 2px solid black;
-         opacity: 1;
-`
-    }
-    `;
-
-//const types = ['Live Stream', 'Play video'];
-function Toogle() {
-
-    const [active, setActive] = useState(true)
-
-    return (
-        <div className='Toogle'>
-            <Tab onClick={() => setActive(true)}> Live Stream </Tab>
-            <Tab onClick={() => setActive(true)}> Play Video </Tab>
-            {
-                active ?
-                    <div>
-
-                    </div>
-                    // document.getElementById("reactPlayer").style.display = none
-                    : null
-            }
-
-        </div>
-    )
-
-}
-class Xplay extends React.Component {
+class XplayVids extends React.Component {
 
 
 
@@ -60,25 +24,38 @@ class Xplay extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log("clicked");
+        //  console.log("clicked");
         this.setState({ url: this.state.inputvalue })
     }
 
     render() {
         return (
             <>
-                <Toogle />
-                <div id='reactPlayer' className="reactPlayer" style={{ overflow: 'hidden' }}>
+                <Head>
+                    <title>MetaX | playvid</title>
+                </Head>
+                <div id='reactPlayer' className="reactPlayer" style={{
+                    overflow: 'hidden',
+                    background: 'blue',
+                    color: 'blue'
+                }}>
                     <header classame="ReactP">
                         <div>
                             <form onSubmit={this.handleSubmit}>
-                                <input onChange={this.handleChange} style={{
-                                    margin: '30px',
-                                    width: '310px',
-                                    height: '50px'
-                                }}
-                                    className="mt-2 border rounded p-4" type="text" placeholder="Input video URL" />
-                                <button style={{ margin: '40px' }} className="rounded bg-blue-600 py-2 px-12 text-white m-16">Play Video</button>
+                                <input onChange={this.handleChange}
+                                    required
+                                    style={{
+                                        margin: '35px',
+                                        width: '310px',
+                                        height: '50px'
+                                    }}
+                                    className="mt-2 border rounded p-5"
+                                    type="text"
+                                    placeholder="Input video URL" />
+                                <button style={{
+                                    margin: '40px',
+
+                                }} className="hover:bg-black-500 rounded bg-blue-600 py-2 px-12 text-white m-16">Play Video</button>
                             </form>
                             <p style={{
                                 overflow: 'hidden',
@@ -115,4 +92,4 @@ class Xplay extends React.Component {
     }
 }
 
-export default Xplay;
+export default XplayVids;
