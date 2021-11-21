@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }) {
         <img width={200} height={200} src="/Meta.png" />
         <div className="flex mt-6"
         >
-          <Link href="/homeLock">
+          <Link href="/Home">
             <a style={{ padding: '0rem 1.5rem' }}
               className="text-0.05px text-blue-500 md:text-0.05px"
             >
