@@ -149,71 +149,67 @@ function XplayLive() {
             <Head>
                 <title>MetaX | playlive</title>
             </Head>
-            <div className="App" style={{
-                background: 'blue',
-                color: 'blue',
-                margin: '30px'
-            }}>
-
-                <div className="stream-url-text-box">
-                    Stream url: {stream !== "" && stream !== null ? <b>{stream}</b> : stream === "" ? <b>stream currently processing</b> : <b>No streams created</b>}
-                </div>
-
-                {/*https://www.youtube.com/watch?v=ECKyIeiSBT4     test url */}
-                <button onClick={startStream}>Stream Video</button>
-                {data ? <p>stream key: {data.streamKey} <p>server : rtmp://rtmp.livepeer.com/live </p> <p>
-                    Input the above in a streaming software like </p></p> : null}
-                {show ? <button className='rounded bg-blue-500 py-2 px-8 text-white m-13' onClick={getStreamUrl}>Play Stream</button> : null}
-
-                <div className="video-container">
-                    {stream !== "" && stream != null ? <ShakaPlayer autoplay controls src={stream} /> : <h3>video will appear here</h3>}
-
-                </div>
 
 
-                {
-                    nftUrl !== "" ? <a href={nftUrl} target="_blank">View NFT</a> : null
-                }
-
-                <br /><br />
-                <form>
-                    <input
-                        className='mt-1 border rounded p-3'
-                        value={nftName}
-                        type="text"
-                        placeholder="Name of NFT"
-                        onChange={(e) => setNftName(e.target.value)}
-                        name="nftName"
-                        required
-                    />
-                    <input
-                        className='mt-1 border rounded p-3'
-                        value={description}
-                        type="text"
-                        placeholder="Description of NFT"
-                        onChange={(e) => setDescription(e.target.value)}
-                        name="description"
-                        required
-                    />
-                    <input
-                        className='mt-1 border rounded p-3'
-                        value={address}
-                        type="text"
-                        placeholder="Wallet Address"
-                        onChange={(e) => setAddress(e.target.value)}
-                        name="address"
-                        required
-                    />
-                    <button className='rounded bg-blue-600 py-2 px-12 text-white m-16' onClick={mintStream}>Mint Video</button>
-                </form>
-
-                {
-                    covData !== null ? <p>{JSON.stringify(covData)}</p> : null
-                }
-                {
-                    covData !== null ? <button className='rounded bg-blue-500 py-2 px-8 text-white m-13' onClick={() => copyData()}>Copy Data</button> : null
-                }
+            <div className="stream-url-text-box">
+                Stream url: {stream !== "" && stream !== null ? <b>{stream}</b> : stream === "" ? <b>stream currently processing</b> : <b>No streams created</b>}
             </div>
+
+            {/*https://www.youtube.com/watch?v=ECKyIeiSBT4     test url */}
+            <button className='rounded bg-blue-500 py-2 px-8 text-white m-13' onClick={startStream}>Stream Video</button>
+            {data ? <p>stream key: {data.streamKey} <p>server : rtmp://rtmp.livepeer.com/live </p> <p>
+                Input the above in a streaming software like </p></p> : null}
+            {show ? <button className='rounded bg-blue-500 py-2 px-8 text-white m-13' onClick={getStreamUrl}>Play Stream</button> : null}
+
+            <div className="video-container">
+                {stream !== "" && stream != null ? <ShakaPlayer autoplay controls src={stream} /> : <h3>video will appear here</h3>}
+
+            </div>
+
+
+            {
+                nftUrl !== "" ? <a href={nftUrl} target="_blank">View NFT</a> : null
+            }
+
+            <br /><br />
+            <form>
+                <input
+                    className='mt-1 border rounded p-3'
+                    value={nftName}
+                    type="text"
+                    placeholder="Name of NFT"
+                    onChange={(e) => setNftName(e.target.value)}
+                    name="nftName"
+                    required
+                />
+                <input
+                    className='mt-1 border rounded p-3'
+                    value={description}
+                    type="text"
+                    placeholder="Description of NFT"
+                    onChange={(e) => setDescription(e.target.value)}
+                    name="description"
+                    required
+                />
+                <input
+                    className='mt-1 border rounded p-3'
+                    value={address}
+                    type="text"
+                    placeholder="Wallet Address"
+                    onChange={(e) => setAddress(e.target.value)}
+                    name="address"
+                    required
+                />
+                <button className='rounded bg-blue-600 py-2 px-12 text-white m-16' onClick={mintStream}>Mint Video</button>
+            </form>
+
+            {
+                covData !== null ? <p>{JSON.stringify(covData)}</p> : null
+            }
+            {
+                covData !== null ? <button className='rounded bg-blue-500 py-2 px-8 text-white m-13' onClick={() => copyData()}>Copy Data</button> : null
+            }
+
         </>
     );
 

@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
         alignItems: 'center',
         justifyContent: 'space-between'
       }}
-        className="fixed inset-x-0 top-0 p-4">
+      >
         <img width={200} height={200} src="/Meta.png" />
         <div className="flex mt-6"
         >
