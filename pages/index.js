@@ -1,16 +1,10 @@
 import React from 'react'
+import Home from './/Home'
 
-const Home = () => {
+const HomeZ = () => {
     return (
-        <div  style={{
-            background: 'blue',
-            color: 'blue'
-        }}>
-            <div>
-                <h1>This is where i write my description.</h1>
-            </div>
-        </div>
-    )
+        <Home />
+    );
 }
 
-export default Home
+export default HomeZ

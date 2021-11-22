@@ -64,6 +64,7 @@ function XplayLive() {
 
     const getStreamUrl = async () => {
         const url = `https://livepeer.com/api/session?limit=20&parentId=${data.id}`;
+        console.log(data.id);
 
         const streamLists = await axios.get(url, {
             headers: {
@@ -77,7 +78,7 @@ function XplayLive() {
         }
         setStream(streamLists.data[0].mp4Url);
 
-        if (stream === " ") alert("stream is currently processing");
+        if (stream === "") alert("stream is currently processing");
     };
     const mintStream = async (e) => {
         e.preventDefault();
@@ -158,7 +159,7 @@ function XplayLive() {
             {/*https://www.youtube.com/watch?v=ECKyIeiSBT4     test url */}
             <button className='rounded bg-blue-500 py-2 px-8 text-white m-13' onClick={startStream}>Stream Video</button>
             {data ? <p>stream key: {data.streamKey} <p>server : rtmp://rtmp.livepeer.com/live </p> <p>
-                Input the above in a streaming software like </p></p> : null}
+                Input the above in a streaming software like OBS</p></p> : null}
             {show ? <button className='rounded bg-blue-500 py-2 px-8 text-white m-13' onClick={getStreamUrl}>Play Stream</button> : null}
 
             <div className="video-container">

@@ -34,11 +34,7 @@ class XplayVids extends React.Component {
                 <Head>
                     <title>MetaX | playvid</title>
                 </Head>
-                <div id='reactPlayer' className="reactPlayer" style={{
-                    overflow: 'hidden',
-                    background: 'blue',
-                    color: 'blue'
-                }}>
+                <div id='reactPlayer' className="reactPlayer">
                     <header classame="ReactP">
                         <div>
                             <form onSubmit={this.handleSubmit}>
