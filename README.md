@@ -2,7 +2,7 @@
 
 ## Welcome to the gateway of the MetaVerse !
 
-### This project is for the EthGlobal web3 jam hack by 0xProf | devs4eth
+### This project is for the EthGlobal web3 jam hack by Praise | devs4eth
 
 ### This project will still be in development after the hack and will work together with the sponsors
 
